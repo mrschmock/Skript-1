@@ -7,9 +7,11 @@
 # und 'command /item <items>' kann wie '/item 5 Diamanten und eine rote Wolle' benutzt werden.
 #
 # == WICHTIG: DIESE GEGENSTANDSNAMEN SIND NOCH NICHT ALLE ÜBERSETZT!
-#   bitte melde dich bei mir (njol@gmx.ch) falls du beim Übersetzen helfen möchtest :)
+#  ALT: bitte melde dich bei mir (njol@gmx.ch) falls du beim Übersetzen helfen möchtest :)
 #
-# Fix for MC 1.8 items by mrschmock (mrschmock@julcraft.de)
+# Fix for MC 1.8 & 1.9 items by mrschmock (mrschmock@julcraft.de)
+# Teilbersetzungen von mrschmock (mrschmock@julcraft.de) jede Hilfe ist gerne gesehen :)
+# 
  
 item = Gegenst¦and¦ände @m
 block = Bl¦ock¦öcke @m
@@ -25,8 +27,7 @@ Sammlungen:
 	# Erze
 	Erz¦e = Kohlenerz, Eisenerz, Golderz, Diamanterz, Lapiserz, beliebiges Rotsteinerz
 	# Bennmaterialien für Schmelzöfen
-	Brennmaterial¦ien = Lavaeimer, Lohenstab, Kohle, Holzkohle, Planke, Baumstamm, grosser Pilz, Werkbank, Zaun, wooden stairs, trapdoor, Setzling, Stock, Truhe, locked chest, Jukebox, Notenblock
-	#Brennmaterial¦ien = Lavaeimer, Lohenstab, Kohle, Holzkohle, Planke, Baumstamm, grosser Pilz, Werkbank, Zaun, Holztreppe, Falltür, Setzling, Stock, Kiste, verschlossene Kiste, Musikbox, Notenblock
+	Brennmaterial¦ien = Lavaeimer, Lohenstab, Kohle, Holzkohle, Planke, Baumstamm, grosser Pilz, Werkbank, Zaun, Holztreppen, Falltür, Setzling, Stock, Truhe, verschlossene Truhe, Jukebox, Notenblock
 	
 	# Essen exkl. Kuchen
 	Essen = beliebiger Apfel, Pilzsuppe, Brot, beliebiges Schweinefleisch, beliebiger Fisch, Keks, Melonenschnitz, beliebiges Rindfleisch, beliebiges Huhn, verrottetes Fleisch
@@ -595,22 +596,22 @@ Standardnamen:
 	mob spawner¦s = 52
 
 
-	# -- stairs --
+	# -- Treppen --
 	{stairs}:
 		{default} = 53, 134, 135, 136, 67, 108, 109, 114, 128, 156
-		(eichen|regular|normal) [wood] = 53
-		(spruce|fir|redwood|pine) [wood] = 134
-		birch [wood] = 135
-		jungle [wood] = 136
-		[any] wood[en] = 53, 134, 135, 136
+		(Eichen|regular|normal)holz = 53
+		(spruce|fir|redwood|pine)holz = 134
+		Birkenholz = 135
+		Urwaldholz = 136
+		[any]holz = 53, 134, 135, 136
 		cobble[stone] = 67
 		[clay] brick[s] = 108
 		stone brick[s] = 109
 		nether [brick[s]] = 114
 		sand[ ]stone = 128
 		[nether] quarz = 156
-		acacia [wood] = 163
-		dark oak [wood] = 164
+		Akazienholz = 163
+		Schwarzeichenholz = 164
 	{stairs direction}:
 		{default} = :0-3
 		any = :0-7
@@ -619,8 +620,8 @@ Standardnamen:
 		any = :0-7
 		upside-down = :4-7
 
-	{stairs direction no default} {stairs} stair[s] = :
-	{stairs direction} {stairs} stair[s] (block|item)¦s = :
+	{stairs direction no default} {stairs}treppe¦n @f = :
+	{stairs direction} {stairs}treppe¦n (block|item)¦s @f = :
 
 
 	# -- chest --
@@ -693,9 +694,9 @@ Standardnamen:
 	door item¦s = 330, 324
 	door¦s = 330, 71, 324, 64
 
-	trapdoor¦s = 96
-	open[ed] trapdoor¦s = 96:4-7
-	closed trapdoor¦s = 96:0-3
+	Falltür¦en @f = 96
+	offene Falltür¦en @f = 96:4-7
+	geschloßene Falltür¦en @f= 96:0-3
 
 	fence gate¦s = 107
 	open[ed] fence gate¦s = 107:4-7
@@ -860,11 +861,11 @@ Standardnamen:
 	[sugar] cane item¦s = 338
 
 
-	# -- jukebox --
-	jukebox¦es = 84
+	# -- Jukebox --
+	Jukebox¦en @f = 84
 
 
-	# -- fence --
+	# -- Zaun --
 	Z¦aun¦äune @m = 85
 
 
@@ -887,8 +888,8 @@ Standardnamen:
 	# -- redstone repeater: see redstone
 
 
-	# -- locked chest --
-	locked chest¦s = 95
+	# -- Verschloßene Truhe --
+	verschlossene Truhe¦n @f = 95
 
 
 	# -- trapdoor: see doors
