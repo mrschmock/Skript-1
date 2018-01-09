@@ -665,12 +665,12 @@ Standardnamen:
 	furnace¦ off¦s off = 61
 
 
-	# -- signs --
-	sign post¦s = 63
-	wall sign¦s = 68
-	sign block¦s = 63, 68
-	sign item¦s = 323
-	sign¦s = 63, 68, 323
+	# -- Schilde --
+	Schild¦e @n = 63
+	Wandschild¦e @n = 68
+	Schildbl¦ock¦öcke @m= 63, 68
+	Schild¦e @n = 323
+	Schild|e @n = 63, 68, 323
 
 
 	# -- doors, trapdoors and fence gates --
