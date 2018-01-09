@@ -1,4 +1,4 @@
-﻿
+
 #
 # == Deutsches aliases.sk ==
 # Diese Gegenstandsnamen werden verwendet, falls Skript auf deutsch konfiguriert wurde (siehe config.sk).
@@ -27,7 +27,7 @@ Sammlungen:
 	# Erze
 	Erz¦e = Kohlenerz, Eisenerz, Golderz, Diamanterz, Lapiserz, beliebiges Rotsteinerz
 	# Bennmaterialien für Schmelzöfen
-	Brennmaterial¦ien = Lavaeimer, Lohenstab, Kohle, Holzkohle, Planke, Baumstamm, grosser Pilz, Werkbank, Zaun, Holztreppen, Falltür, Setzling, Stock, Truhe, verschlossene Truhe, Jukebox, Notenblock
+	Brennmaterial¦ien = Lavaeimer, Lohenstab, Kohle, Holzkohle, Planke, Baumstamm, grosser Pilz, Werkbank, Zaun, Holztreppen, Falltür, Setzling, Stock, Truhe, Jukebox, Notenblock
 	
 	# Essen exkl. Kuchen
 	Essen = beliebiger Apfel, Pilzsuppe, Brot, beliebiges Schweinefleisch, beliebiger Fisch, Keks, Melonenschnitz, beliebiges Rindfleisch, beliebiges Huhn, verrottetes Fleisch
@@ -61,7 +61,13 @@ Standardnamen:
 
 
 	# -- Stein --
-	Stein¦e @m = 1
+	Steinbl¦ock¦öcke @m = 1:0
+	Granitbl¦ock¦öcke @m = 1:1
+	polierter Granitbl¦ock¦öcke @m = 1:2
+	Dioritbl¦ock¦öcke @m = 1:3
+	polierter Dioritbl¦ock¦öcke @m = 1:4
+	Andesitbl¦ock¦öcke @m = 1:5
+	polierter Andersitbl¦ock¦öcke @m = 1:6
 
 
 	# -- Gras --
@@ -70,8 +76,11 @@ Standardnamen:
 
 
 	# -- Erde --
-	Erde @f = 3
-	Erdbl¦ock¦öcke @m = 3
+	Erde @f = 3:0
+	Erdbl¦ock¦öcke @m = 3:0
+	grobe Erde @f = 3:1
+	
+	Podsol @m = 3:2
 
 
 	# -- Pflasterstein --
@@ -110,8 +119,9 @@ Standardnamen:
 
 
 	# -- Sand & Geröll --
-	Sand @m = 12
-	Geröll @n = 13
+	Sand @m = 12:0
+	roter Sand @m = 12:1
+	Kies @m = 13
 	(Schutt|Schotter) @m = 13
 
 
@@ -138,28 +148,28 @@ Standardnamen:
 
 	# -- Holz, Blätter, Setzlinge & Planken --
 	{tree type}:
-		{default} = :0-15
-		(Eichen|normale(r|s|) ) = :0, :4, :8, :12
-		(Tannen|Fichten) = :1, :5, :9, :13
+		#{default} = :0-15
+		Eichen = :0, :4, :8, :12
+		Fichten = :1, :5, :9, :13
 		Birken = :2, :6, :10, :14
 		Tropen = :3, :7, :11, :15
 		Dschungel = :3, :7, :11, :15
 		Jungel = :3, :7, :11, :15
 	{tree type 2}:
-		{default} = :0-15
+		#{default} = :0-15
 		Akazien = :0, :4, :8, :12, :2, :6, :10, :14
-		(dunkles Eichen|dunkles ) = :1, :5, :9, :13, :3, :7, :11, :15
+		Schwarzeichen = :1, :5, :9, :13, :3, :7, :11, :15
 	{wood type}: # also used elsewhere
 		{default} = :0-5
 		<any> = :0-5
-		(Eichen|normale(r|s|) ) = :0
-		(Tannen|Fichten) = :1
+		Eichen = :0
+		Fichten = :1
 		Birken = :2
 		Tropen = :3
 		Dschungel = :3
 		Jungel = :3
 		Akazien = :4
-		(dunkles Eichen|dunkles) = :5
+		Schwarzeichen = :5
 
 	{log direction}:
 		{default} = :0-3
@@ -188,22 +198,40 @@ Standardnamen:
 	
 	{log direction no default} {tree type}([Baum]St¦amm¦ämme @m|H¦olz¦ölzer @n) = 17
 	{log direction} {tree type}([Baum]Stamm|Holz) <item/block> = 17
-	{tree type}Blätter @x = 18
-	[<any>] permanente {tree type}Blätter @x = 18:4-7, 18:12-15
+	#{tree type}Blätter @x = 18
+	#[<any>] permanente {tree type}Blätter @x = 18:4-7, 18:12-15
 
 	{log direction no default} {tree type 2}([Baum]St¦amm¦ämme @m|H¦olz¦ölzer @n) = 162
 	{log direction} {tree type 2}([Baum]Stamm|Holz) <item/block> = 162
-	{tree type 2}Blätter @x = 161
-	[<any>] permanente {tree type 2}Blätter @x = 161:4-7, 161:12-15
+	{tree type 2} Blätter @x = 161
+	[<any>] permanente {tree type 2} Blätter @x = 161:4-7, 161:12-15
 
 	{log direction no default} ([Baum]St¦amm¦ämme @m|H¦olz¦ölzer @n) = 17, 161
 	{log direction} ([Baum]Stamm|Holz) <item/block> = 17, 161
-	[<any>] Blätter @x = 18:0-15, 161:0-15
-	[<any>] permanente Blätter @x = 18:4-7, 18:12-15, 161:4-7, 161:12-15
-
-
+	#[<any>] Blätter @x = 18:0-15, 161:0-15
+	#[<any>] permanente Blätter @x = 18:4-7, 18:12-15, 161:4-7, 161:12-15
+	
+	
+	Eichenlaub @n = 18:0
+	Eichenlaub @n = 18:4
+	Eichenlaub @n = 18:8
+	Eichenlaub @n = 18:12
+	Fichennadeln @n = 18:1
+	Fichennadeln @n = 18:5
+	Fichennadeln @n = 18:9
+	Fichennadeln @n =18:13
+	Birkenlaub @n = 18:2
+	Birkenlaub @n = 18:6
+	Birkenlaub @n = 18:10
+	Birkenlaub @n = 18:14
+	Tropenbaumlaub @n = 18:3
+	Tropenbaumlaub @n = 18:7
+	Tropenbaumlaub @n = 18:11
+	Tropenbaumlaub @n = 18:15
+	
 	# -- Schwamm --
-	Schw¦amm¦ämme @m = 19
+	trockene¦r Schw¦ämme¦amm @m = 19:0
+	nasse¦r Schw¦ämme¦amm @m = 19:1
 
 
 	# -- Glas --
@@ -217,6 +245,25 @@ Standardnamen:
 	weiss[ ]gefärbte(s Gl¦as¦äser| [Glas]Scheibe¦n) = 160:0
 	# etc...
 	
+	Gefärbtesgl¦as¦äser @n = 95
+	<any> gefärbt¦es¦e Gl¦as¦äser @n = 95:0-15
+	weisse¦s Glas¦ Gläser @n = 95:0
+	orangene¦s Glas¦ Gläser @n = 95:1
+	magenta Gl¦as¦äser @n = 95:2
+	hellblaue¦s Glas¦ Gläser @n = 95:3
+	gelbe¦s Glas¦ Gläser @n = 95:4
+	hellgrüne¦s Glas¦ Gläser @n = 95:5
+	rosa Gl¦as¦äser @n = 95:6
+	graue¦s Glas¦ Gläser @n = 95:7
+	hellgraue¦s Glas¦ Gläser @n = 95:8
+	türkise¦s Glas¦ Gläser @n = 95:9
+	violette¦s Glas¦ Gläser @n = 95:10
+	blaue¦s Glas¦ Gläser @n = 95:11
+	braune¦s Glas¦ Gläser @n = 95:12
+	grüne¦s Glas¦ Gläser @n = 95:13
+	rote¦s Glas¦ Gläser @n = 95:14
+	schwarze¦s Glas¦ Gläser @n = 95:15
+	
 
 	# -- Lapislazuli --
 	# Lapiserz & -block: siehe Erze
@@ -224,12 +271,14 @@ Standardnamen:
 
 
 	# -- Dispenser --
-	Dispenser @m = 23
-	Spender @m = 23
+	Werfer @m = 23
+	# Spender @m = 23
 
 
 	# -- Sandstein --
-	Sandstein¦e @m = 24
+	Sandstein¦e @m = 24:0
+	gemeisselte¦r Sandstei¦ne¦n @m = 24:1
+	polierte¦r Sandstei¦ne¦n @m = 24:2
 
 
 	# -- Notenblock --
@@ -264,27 +313,27 @@ Standardnamen:
 	[<any>] {minerail} [(Minecart|Loren)]Schiene¦n @f = 27, 28, 66
 	{minerail} [(Minecart|Loren)]Schienen<item/block> = 66
 	# angetriebene Schiene
-	{minerail straight} powered [minecart] (rail|track) = 27
+	{minerail straight} Boosterschiene¦n @f  = 27
 	{minerail straight} [minecart] booster¦s = 27
 	{minerail straight} [minecart] booster (rail|track)¦s = 27
-	{minerail straight} powered [minecart] (rail|track)¦ on¦s on = powered rail:8-15
-	{minerail straight} powered [minecart] (rail|track)¦ off¦s off = powered rail:0-7
-	{minerail straight} active powered [minecart] (rail|track)¦s = powered rail:8-15
-	{minerail straight} inactive powered [minecart] (rail|track)¦s = powered rail:0-7
-	{minerail straight} [minecart] booster¦ on¦s on = powered rail:8-15
-	{minerail straight} [minecart] booster¦ off¦s off = powered rail:0-7
-	{minerail straight} [minecart] booster (rail|track)¦ on¦s on = powered rail:8-15
-	{minerail straight} [minecart] booster (rail|track)¦ off¦s off = powered rail:0-7
-	{minerail straight} (active|powered) [minecart] booster¦s = powered rail:8-15
-	{minerail straight} (inactive|unpowered) [minecart] booster¦s = powered rail:0-7
-	{minerail straight} (active|powered) [minecart] booster (rail|track)¦s = powered rail:8-15
-	{minerail straight} (inactive|unpowered) [minecart] booster (rail|track)¦s = powered rail:0-7
+	{minerail straight} powered [minecart] (rail|track)¦ on¦s on = Boosterschiene:8-15
+	{minerail straight} powered [minecart] (rail|track)¦ off¦s off = Boosterschiene:0-7
+	{minerail straight} active powered [minecart] (rail|track)¦s = Boosterschiene:8-15
+	{minerail straight} inactive powered [minecart] (rail|track)¦s = Boosterschiene:0-7
+	{minerail straight} [minecart] booster¦ on¦s on = Boosterschiene:8-15
+	{minerail straight} [minecart] booster¦ off¦s off = Boosterschiene:0-7
+	{minerail straight} [minecart] booster (rail|track)¦ on¦s on = Boosterschiene:8-15
+	{minerail straight} [minecart] booster (rail|track)¦ off¦s off = Boosterschiene:0-7
+	{minerail straight} (active|powered) [minecart] booster¦s = Boosterschiene:8-15
+	{minerail straight} (inactive|unpowered) [minecart] booster¦s = Boosterschiene:0-7
+	{minerail straight} (active|powered) [minecart] booster (rail|track)¦s = Boosterschiene:8-15
+	{minerail straight} (inactive|unpowered) [minecart] booster (rail|track)¦s = Boosterschiene:0-7
 	# Detektorschiene
-	{minerail straight} detector [minecart] (rail|track)¦s = 28
-	{minerail straight} detector [minecart] (rail|track)¦ on¦s on = detector rail:8-15
-	{minerail straight} detector [minecart] (rail|track)¦ off¦s off = detector rail:0-7
-	{minerail straight} active detector [minecart] (rail|track)¦s = detector rail:8-15
-	{minerail straight} inactive detector [minecart] (rail|track)¦s = detector rail:0-7
+	{minerail straight} Sensorschiene¦n @f = 28
+	{minerail straight} detector [minecart] (rail|track)¦ on¦s on = Sensorschiene:8-15
+	{minerail straight} detector [minecart] (rail|track)¦ off¦s off = Sensorschiene:0-7
+	{minerail straight} active detector [minecart] (rail|track)¦s = Sensorschiene:8-15
+	{minerail straight} inactive detector [minecart] (rail|track)¦s = Sensorschiene:0-7
 	# activator rail
 	{minerail straight} activator [minecart] (rail|track)¦s = 157
 
@@ -431,15 +480,15 @@ Standardnamen:
 	<any> Wolle @f = 35:0-15
 	weisse Wolle @f = 35:0
 	orange Wolle @f = 35:1
-	(magenta|rosa) Wolle @f = 35:2
+	purpurne Wolle @f = 35:2
 	hellblaue Wolle @f = 35:3
 	gelbe Wolle @f = 35:4
 	hellgrüne Wolle @f = 35:5
-	(pinke|lila) Wolle @f = 35:6
+	(pinke|rosa) Wolle @f = 35:6
 	graue Wolle @f = 35:7
 	hellgraue Wolle @f = 35:8
 	cyan Wolle @f = 35:9
-	purpurne Wolle @f = 35:10
+	violette Wolle @f = 35:10
 	blaue Wolle @f = 35:11
 	braune Wolle @f = 35:12
 	[dunkel]grüne Wolle @f = 35:13
@@ -490,16 +539,16 @@ Standardnamen:
 	# -- Stufen --
 	{any slab}:
 		{default} = 44, 126
-		single = 44, 126
-		double = 43, 125
+		einfache = 44, 126
+		doppelte = 43, 125
 	{stone slab}:
 		{default} = 44
-		single = 44
-		double = 43
+		einfache = 44
+		doppelte = 43
 	{wooden slab}:
 		{default} = 126
-		single = 126
-		double = 125
+		einfache = 126
+		doppelte = 125
 	
 	{slab facing}:
 		{default} = :0-7
@@ -515,21 +564,21 @@ Standardnamen:
 	
 	{wooden slab type}:
 		{default} = :0-5, :8-13
-		<any> = :0-5, :8-13
-		(oak|regular|normal) = :0, :8
-		(spruce|fir|redwood|pine) = :1, :9
-		birch = :2, :10
-		jungle = :3, :11
-		acacia = :4, :12
-		dark oak = :5, :13
+		#<any> = :0-5, :8-13
+		Eichenholz = :0, :8
+		Fichtenholz = :1, :9
+		Birkenholz = :2, :10
+		Tropenholz = :3, :11
+		Akatienholz = :4, :12
+		Schwarzeichenholz = :5, :13
 	{stone slab type}:
 		{default} = :0-1, :3-5, :8-9, :11-13
 		any = :0-1, :3-5, :8-9, :11-13
-		stone = :0, :8
-		sandstone = :1, :9
-		cobble[stone] = :3, :11
-		brick = :4, :12
-		stone brick[s]) = :5, :13
+		Stein = :0, :8
+		Sandstein = :1, :9
+		Pflasterstein = :3, :11
+		Ziegelstein = :4, :12
+		Steinziegel = :5, :13
 	{stone slab type no default}:
 		any = :0-1, :3-5, :8-9, :11-13
 		stone = :0, :8
@@ -538,12 +587,12 @@ Standardnamen:
 		brick = :4, :12
 		stone brick[s]) = :5, :13
 	
-	{slab facing no default} {stone slab} {stone slab type no default} (step|slab)¦s = :
-	{slab facing} {stone slab} {stone slab type} (step|slab) (block|item)¦s = :
-	{slab facing no default} {wooden slab} {wooden slab type} [wood[en]] (step|slab)¦s = :
-	{slab facing} {wooden slab} {wooden slab type} (step|slab) (block|item)¦s = :
-	{slab facing no default} {any slab} (step|slab)¦s = :
-	{slab facing} {any slab} (step|slab) (block|item)¦s = :
+	{slab facing no default} {stone slab} {stone slab type no default}stuf¦en¦e = :
+	{slab facing} {stone slab} {stone slab type}stuf¦en¦e (block|item) = :
+	{slab facing no default} {wooden slab} {wooden slab type}stuf¦en¦e = :
+	{slab facing} {wooden slab} {wooden slab type}stuf¦en¦e (block|item) = :
+	{slab facing no default} {any slab}stuf¦en¦e = :
+	{slab facing} {any slab}stuf¦en¦e (block|item) = :
 
 
 	# -- Ziegelstein --
@@ -789,18 +838,18 @@ Standardnamen:
 	(pressed|active) {weighted pressure plate} weighted [pressure] plate¦s = :1
 	(unpressed|inactive) {weighted pressure plate} weighted [pressure] plate¦s = :0
 
-	piston base¦s = 33
-	sticky piston base¦s = 29
-	any piston base¦s = 33, 29
+	Kolben @m = 33
+	Klebekolben @m = 29
+	ausgezogener Kolben @m = 33, 29
 	#
 	piston extension¦s = 34:0-5
 	sticky piston extension¦s = 34:8-13
-	any piston extension¦s = 34
+	ausgezogener Kolben = 34
 	#
-	piston¦s = piston base, piston extension
-	piston (item|block)¦s = piston base
-	sticky piston¦s = sticky piston base, sticky piston extension
-	sticky piston (item|block)¦s = sticky piston base
+	piston¦s = Kolben, ausgezogener Kolben
+	piston (item|block)¦s = Kolben
+	sticky piston¦s = Klebekolben, sticky piston extension
+	sticky piston (item|block)¦s = Klebekolben
 	any piston¦s = 29, 33, 34
 	#
 	extended piston base¦s = 33:8-13
@@ -809,7 +858,7 @@ Standardnamen:
 	#
 	extended piston¦s = extended piston base, piston extension
 	extended sticky piston¦s = extended sticky piston base, sticky piston extension
-	any extended piston¦s = any extended piston base, any piston extension
+	any extended piston¦s = any extended piston base, ausgezogener Kolben
 	#
 	retracted piston¦s = 33:0-5
 	retracted sticky piston¦s = 29:0-5
@@ -888,8 +937,7 @@ Standardnamen:
 	# -- redstone repeater: see redstone
 
 
-	# -- Verschloßene Truhe --
-	verschlossene Truhe¦n @f = 95
+	# -- Verschloßene Truhe: removed
 
 
 	# -- trapdoor: see doors
@@ -1752,7 +1800,8 @@ Standardnamen:
 	magenta Banner @n = 425:13
 	orangenes Banner @n = 425:14
 	weisses Banner @n = 425:15
-
+	
+	
 	# -- FIX for 1.9.x --
 
 	Endstab @m = 198
@@ -1770,9 +1819,9 @@ Standardnamen:
 	Wiederhol-Befehlsblock @m = 210
 	Ketten-Befehlsblock @m = 211
 	Gefrorener Eisblock @m = 212
-
+	
 	Struckturblock @m = 255
-
+	
 	Enderkristall @m = 426
 	Chorusfrucht @f = 432
 	Geplatzte Chorusfrucht @f = 433
@@ -1791,3 +1840,4 @@ Standardnamen:
 	Tropenholzboot @n = 446
 	Akazienholzboot @n = 447
 	Schwarzeichenholzboot @n = 448
+	
