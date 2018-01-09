@@ -545,17 +545,17 @@ Standardnamen:
 	{slab facing} {any slab} (step|slab) (block|item)¦s = :
 
 
-	# -- bricks --
-	[clay] bricks = 45
-	[clay] brick[s] <block> = 45
-	[clay] brick[s] <item> = 336
+	# -- Ziegelstein --
+	Ziegelstein¦e @m = 45
+	Ziegelsteinbl¦ock¦öcke @m = 45
+	Ziegelstein¦e <item> @m= 336
 
 	[stained] [hard[ened]] clay = 159
 	
-	clay = 82, 337
-	clay <block> = 82
-	clay <item> = 337
-	clay ball¦s = 337
+	Lehm @m = 82, 337
+	Lehmbl¦ock¦öcke @m = 82
+	Lehm @m = 337
+	Lehmb¦all¦älle @m = 337
 	
 	hard[ened] clay = 172
 
@@ -565,8 +565,8 @@ Standardnamen:
 	Dynamit @m = 46
 
 
-	# -- bookshelf --
-	bookshel¦f¦ves = 47
+	# -- Buchregal --
+	B¦uchregal¦ücherregale @n = 47
 
 
 	# -- mossy cobblestone: see cobblestone
@@ -702,8 +702,8 @@ Standardnamen:
 	closed fence gate¦s = 107:0-3
 
 
-	# -- ladder --
-	ladder¦s = 65
+	# -- Leiter --
+	Leiter¦n @f = 65
 
 
 	# -- rails: see minecart rails
@@ -728,11 +728,11 @@ Standardnamen:
 	redstone ore¦ off¦s off = 73
 
 	# variation {torch}: see torch
-	{torch} redstone torch¦es = 75, 76
-	{torch} redstone torch¦ on¦es on = 76
-	active {torch} redstone torch¦es = 76
-	{torch} redstone torch¦ off¦es off = 75
-	inactive {torch} redstone torch¦es = 75
+	{torch} redstone Fackel¦n @f = 75, 76
+	{torch} redstone Fackel¦ an¦n an @f = 76
+	active {torch} redstone Fackel¦n @f = 76
+	{torch} redstone Fackel¦ aus¦n aus = 75
+	inactive {torch} redstone Fackel¦n @f = 75
 
 	{diodedelay}:
 		1-tick[-delay] = :0-3
@@ -836,14 +836,14 @@ Standardnamen:
 	dropper¦s = 158
 
 
-	# -- snow & ice --
-	snow layer¦s = 78
-	ice @- = 79
-	ice <block> = 79
-	snow = 80
-	snow <block> = 80
-	packed ice = 174
-	packed ice <block> = 174
+	# -- Schnee und Eis --
+	Schneeschicht¦en @f = 78
+	Eis @n = 79
+	Eisbl¦ock¦öcke @m = 79
+	Schnee = 80
+	Schneebl¦ock¦öcke @m = 80
+	Packeis = 174
+	Packeisbl¦ock¦öcke @m = 174
 
 
 	# -- cactus --
@@ -915,8 +915,8 @@ Standardnamen:
 	# -- huge mushrooms: see vegetation
 
 
-	# -- iron bars --
-	[iron] bars = 101
+	# -- Eisengitter --
+	Eisengitter¦n @f = 101
 
 
 	# -- glass pane: see glass
