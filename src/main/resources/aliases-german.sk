@@ -7,9 +7,10 @@
 # und 'command /item <items>' kann wie '/item 5 Diamanten und eine rote Wolle' benutzt werden.
 #
 # == WICHTIG: DIESE GEGENSTANDSNAMEN SIND NOCH NICHT ALLE ÜBERSETZT!
-#   bitte melde dich bei mir (njol@gmx.ch) falls du beim Übersetzen helfen möchtest :)
+#  ALT:  bitte melde dich bei mir (njol@gmx.ch) falls du beim Übersetzen helfen möchtest :)
 #
-# Fix for MC 1.8 items by mrschmock (mrschmock@julcraft.de)
+# Fix for MC 1.8 & 1.9 items by mrschmock (mrschmock@julcraft.de)
+# Teilbersetzungen von mrschmock (mrschmock@julcraft.de) ich bin für jede Hilfe dankbar :) 
  
 item = Gegenst¦and¦ände @m
 block = Bl¦ock¦öcke @m
